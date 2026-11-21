@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="topbar">
+  <div class="brand">
+    <h1>Leonida Legend</h1>
+    <p class="tagline">Grand Theft Auto VI · PlayStation 5 trophy guide &amp; tracker — all 55 trophies, guides in our own words, every guide sourced.</p>
+  </div>
+  <div class="progress-box">
+    <p id="progress" class="progress-line">0 of 55 earned · 0%</p>
+    <div class="bar"><div id="bar-fill"></div></div>
+    <p id="grade-counts" class="grade-counts"></p>
+  </div>
+</header>
+
+<nav id="toolbar" aria-label="Tracker controls">
+  <div class="tabs" role="tablist">
+    <button id="tab-tracker" type="button" class="tab active">Tracker</button>
+    <button id="tab-roadmap" type="button" class="tab">Roadmap to Platinum</button>
+  </div>
+  <div class="chips" id="kind-chips" role="group" aria-label="Filter by kind">
+    <button type="button" class="chip active" data-kind="all">All kinds</button>
+    <button type="button" class="chip" data-kind="story">Story</button>
+    <button type="button" class="chip warn" data-kind="missable">⚠ Missable</button>
+    <button type="button" class="chip" data-kind="collectibles">Collectibles</button>
+    <button type="button" class="chip" data-kind="activities">Activities</button>
+    <button type="button" class="chip" data-kind="online">Online</button>
+  </div>
+  <label class="ctl">Grade
+    <select id="grade-filter">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="ctl"><input type="checkbox" id="spoiler-toggle"> Hide story spoilers</label>
+  <label class="ctl"><input type="checkbox" id="todo-toggle"> To do only</label>
+  <input type="search" id="search" placeholder="Search trophies…" aria-label="Search trophies">
+  <button id="export-btn" type="button">Export progress</button>
+  <label class="ctl file-ctl">Import progress <input id="import-file" type="file" accept="application/json,.json"></label>
+</nav>
+
+<main id="tracker-view">
+  <section id="list-pane" aria-label="Trophy checklist">
+    <p id="list-summary" class="list-summary"></p>
+    <ul id="trophy-list"></ul>
+  </section>
+  <aside id="detail-pane" aria-label="Trophy guide">
+    <div id="detail"></div>
+    <footer class="source-note">
+      <p><strong>Where the facts come from.</strong> Trophy names, descriptions and grades are the official PlayStation ones. Guides are written for this app in our own words; each one names its sources beside it. Look a trophy up at
+      <a href="https://psnprofiles.com">PSNProfiles</a> or <a href="https://www.exophase.com">Exophase</a>.</p>
+    </footer>
+  </aside>
+</main>
+
+<main id="roadmap-view" hidden>
+  <section class="roadmap-intro">
+    <h2>Roadmap to the Platinum</h2>
+    <p>Six stages, in the order to earn them, built from the official descriptions: finish the story first (its chapters and named missions come in order), clear the stranger strands while they are fresh, sweep collectibles and exploration next, then activities, then the free-roam feats, and finish with money, 100% completion and the platinum itself. The five missable trophies are flagged ⚠ wherever they appear — each flag is reasoned from that trophy's official description, in its guide.</p>
+  </section>
+  <div id="missable-callout"></div>
+  <div id="roadmap-stages"></div>
+</main>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
